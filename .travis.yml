@@ -16,6 +16,7 @@ after_success:
 - git config remote.storybook.fetch "+refs/heads/storybook:refs/remotes/origin/storybook"
 - git config branch.storybook.remote storybook
 - cat .git/config
+- git fetch
 - git remote show origin
 # Build Storybook
 - git checkout -b storybook origin/storybook
