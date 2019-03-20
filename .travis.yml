@@ -20,7 +20,7 @@ after_success:
 - git fetch storybook
 - git remote show storybook
 # Build Storybook
-- git checkout -b storybook storybook/storybook
+- git checkout -b storybook origin/storybook
 - mv netlify.storybook.toml netlify.toml
 - git add .
 - git commit -m "$TRAVIS_COMMIT_MESSAGE"
