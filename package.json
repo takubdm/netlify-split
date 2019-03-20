@@ -114,8 +114,8 @@
       "node"
     ],
     "watchPlugins": [
-      "/Users/thara/Desktop/netlify-split/node_modules/jest-watch-typeahead/filename.js",
-      "/Users/thara/Desktop/netlify-split/node_modules/jest-watch-typeahead/testname.js"
+      "<rootDir>/node_modules/jest-watch-typeahead/filename.js",
+      "<rootDir>/node_modules/jest-watch-typeahead/testname.js"
     ]
   },
   "babel": {
