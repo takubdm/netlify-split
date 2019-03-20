@@ -12,9 +12,9 @@ after_success:
 - git config --global user.email "t.hara.mobile@gmail.com"
 - git config --global user.name "takubdm"
 - git config --global url."git@github.com:".insteadOf "https://github.com/"
-- git branch -a
-- git fetch --all
-- git branch -a
+- git remote show origin
+- git remote update -p
+- git remote show origin
 # Build Storybook
 - git checkout -b storybook origin/storybook
 - mv netlify.storybook.toml netlify.toml
