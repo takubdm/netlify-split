@@ -17,9 +17,9 @@ after_success:
 - git config branch.storybook.remote storybook
 - cat .git/config
 - git fetch
-- git remote show origin
+- git remote show storybook
 # Build Storybook
-- git checkout -b storybook origin/storybook
+- git checkout -b storybook storybook/storybook
 - mv netlify.storybook.toml netlify.toml
 - git add .
 - git commit -m "$TRAVIS_COMMIT_MESSAGE"
