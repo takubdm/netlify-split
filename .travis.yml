@@ -14,7 +14,7 @@ after_success:
 - git config --global url."git@github.com:".insteadOf "https://github.com/"
 - git config remote.storybook.url https://github.com/takubdm/netlify-split.git
 - git config remote.storybook.fetch "+refs/heads/storybook:refs/remotes/origin/storybook"
-- git config branch.storybook.remote = storybook
+- git config branch.storybook.remote storybook
 - cat .git/config
 - git remote show origin
 # Build Storybook
