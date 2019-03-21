@@ -5,7 +5,7 @@ before_install:
 script:
 - yarn test
 after_success:
-# Prepare for GitHub
+### Prepare for GitHub
 - openssl aes-256-cbc -K $encrypted_5844295fdcfb_key -iv $encrypted_5844295fdcfb_iv -in ./id_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 600 ~/.ssh/id_rsa
 - echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
@@ -14,12 +14,10 @@ after_success:
 - git config --global url."git@github.com:".insteadOf "https://github.com/"
 - git config remote.storybook.url https://github.com/takubdm/netlify-split.git
 - git config remote.storybook.fetch "+refs/heads/storybook:refs/remotes/origin/storybook"
-# - git config branch.storybook.remote storybook
-# - git config branch.storybook.merge refs/heads/storybook
-- cat .git/config
+# - cat .git/config
 - git fetch storybook
-- git remote show storybook
-# Build Storybook
+# - git remote show storybook
+### Build Storybook
 - git checkout -b storybook
 - mv netlify.storybook.toml netlify.toml
 - git add .
