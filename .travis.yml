@@ -21,11 +21,10 @@ after_success:
 - git remote show storybook
 # Build Storybook
 - git checkout -b storybook
-- git pull origin storybook
 - mv netlify.storybook.toml netlify.toml
 - git add .
 - git commit -m "$TRAVIS_COMMIT_MESSAGE"
-- git push -u origin storybook
+- git push -u origin storybook --force
 # Generate docs by TypeDoc
 - git checkout -b gh-pages master
 - git subtree add --prefix docs origin gh-pages
