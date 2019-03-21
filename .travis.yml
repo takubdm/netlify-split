@@ -14,9 +14,6 @@ after_success:
 - git config --global url."git@github.com:".insteadOf "https://github.com/"
 - git config remote.storybook.url https://github.com/takubdm/netlify-split.git
 - git config remote.storybook.fetch "+refs/heads/storybook:refs/remotes/origin/storybook"
-# - cat .git/config
-- git fetch storybook
-# - git remote show storybook
 ### Build Storybook
 - git checkout -b storybook
 - mv netlify.storybook.toml netlify.toml
