@@ -1,8 +1,0 @@
-[build]
-  publish = "storybook-static/"
-  command = "yarn build-storybook"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  
